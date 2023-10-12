@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("https://fonts.googleapis.com/css?family=Lora");
+
+.font-lora {
+  font-family: "Lora";
+  src: url("https://fonts.googleapis.com/css?family=Lora");
+}
+
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+  src: url("https://fonts.googleapis.com/css?family=Poppins");
+}
+
+#root-portal .react-datepicker-popper {
+  padding: 32px 16px;
+  border-radius: 24px;
+  background: var(--neutral-000, #fff);
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.12);
+}
+
+#root-portal .react-datepicker {
+  border: none;
+}
+
+.react-datepicker-wrapper input[type="text"] {
+  background-color: unset;
+  outline: none;
+}
+
+.datePicker .react-datepicker__header {
+  background: unset;
+  border: none;
+}
+
+.react-datepicker__triangle {
+  display: none;
+}
+
+.react-datepicker__current-month {
+  padding-bottom: 32px;
+}
+
+.datePicker .react-datepicker__day-name {
+  text-transform: uppercase;
+  color: var(--neutral-500, #a7aaab);
+}
+
+.react-datepicker__month-container {
+  font-family: "Poppins", sans-serif;
+}
+
+.datePicker .react-datepicker__day--selected,
+.datePicker .react-datepicker__day:hover {
+  background-color: #b3cec9;
+  border-radius: 100px;
+  color: var(--brand-green-500, #025b4b);
+}
+
+.react-datepicker__day .react-datepicker__day {
+  color: var(--neutral-900, #05090d);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+}
+
+.datePicker .react-datepicker__day-name,
+.datePicker .react-datepicker__day,
+.datePicker .react-datepicker__time-name {
+  margin: 11px 15px 11px 17px;
+  @media only screen and (max-width: 600px) {
+    margin: 0.166rem;
+  }
+}
+
+.country-container {
+  max-height: 400px;
+  overflow: scroll;
+  @media only screen and (max-width: 600px) {
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
