@@ -4,7 +4,6 @@ import { toast } from "react-toastify";
 
 export const getInvestigations = async (
   page: number,
-  source?: string,
   severity?: string,
   determination?: string,
   column?: string,
@@ -19,9 +18,6 @@ export const getInvestigations = async (
     if (chosenDate) {
       const formattedDate = moment(chosenDate).format("YYYY-MM-DD");
       defaultQuery += `&date=${formattedDate}`;
-    }
-    if (source) {
-      defaultQuery += `&source=${source}`;
     }
     if (column) {
       defaultQuery += `&column=${column}`;

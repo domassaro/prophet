@@ -3,9 +3,9 @@ import { Investigation } from "@/types/types";
 import { PaginationWrapper } from "./paginationWrapper";
 import { InvestigationTable } from "./investigationTable";
 import { getInvestigations } from "@/api/investigation";
+import { SortDescriptor } from "@nextui-org/react";
 import ActionBar from "./actionBar";
 import moment from "moment";
-import { SortDescriptor } from "@nextui-org/react";
 
 function InvestigationWrapper() {
   const [investigations, setInvestigations] = useState<Investigation[]>([]);
@@ -16,7 +16,6 @@ function InvestigationWrapper() {
   const [totalPages, setTotalPages] = useState<number>(0);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [severity, setSeverity] = useState<string>("All");
-  const [source, setSource] = useState<string>("");
   const [determination, setDetermination] = useState<string>("All");
   const [sortDescriptor, setSortDescriptor] = useState<SortDescriptor>({
     column: "alertFiredTimestamp",
@@ -32,7 +31,6 @@ function InvestigationWrapper() {
 
       const response = await getInvestigations(
         page,
-        source,
         severity,
         determination,
         column,
@@ -51,7 +49,7 @@ function InvestigationWrapper() {
 
   useEffect(() => {
     fetchInvestigations();
-  }, [page, source, severity, determination, sortDescriptor, chosenDate]);
+  }, [page, severity, determination, sortDescriptor, chosenDate]);
 
   const handleDateChange = (e: SetStateAction<string>) => {
     setChosenDate(e);

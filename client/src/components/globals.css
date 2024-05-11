@@ -74,3 +74,14 @@
   display: none;
 }
 
+.data-\[hover\=true\]\:text-foreground-400[data-hover=true] {
+  color: black !important;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: opacity 300ms, transform 300ms;
+}
+
+.text-foreground-400 {
+  color: white !important;
+}
+

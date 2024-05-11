@@ -1,6 +1,6 @@
 import { SetStateAction } from "react";
 import DatePicker from "./datePicker";
-import { Button, Divider } from "@nextui-org/react";
+import { Divider } from "@nextui-org/react";
 import DropDownSelector from "./dropDownSelector";
 import { Option } from "@/types/types";
 
