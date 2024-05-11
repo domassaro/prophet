@@ -39,7 +39,7 @@ const DatePicker = ({ date, handleDateChange }: Props): JSX.Element => {
           selected={selectedDate}          
           dateFormat="MMMM d, yyyy"
           popperPlacement="top"
-          className="text-base color-white"
+          className="text-base color-white w-[190px]"
           onChange={handleDateChange}
           maxDate={today}
           onCalendarOpen={() => setCalendarOpen(true)}
