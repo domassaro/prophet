@@ -33,9 +33,9 @@ export const InvestigationTable = ({
       onSortChange={setSortDescriptor}
       removeWrapper
     >
-      <TableHeader>
+      <TableHeader className="!rounded-t-lg">
         <TableColumn
-          className="text-tiny text-black uppercase font-bold bg-yellow-accent"
+          className="!rounded-none !rounded-tl-lg text-tiny text-black uppercase font-bold bg-yellow-accent"
           key="title"
           allowsSorting
         >
@@ -56,7 +56,7 @@ export const InvestigationTable = ({
           Determination
         </TableColumn>
         <TableColumn
-          className="text-tiny text-black uppercase font-bold bg-yellow-accent" 
+          className="!rounded-none !rounded-tr-lg text-tiny text-black uppercase font-bold bg-yellow-accent" 
           key="alertFiredTimestamp"
           allowsSorting
         >
